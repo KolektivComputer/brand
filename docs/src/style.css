@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Official Kolektiv brand typefaces (see /typography). */
+  --font-display: 'Inclusive Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Iosevka', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+/*
+ * Marks are sized with className/style (e.g. `h-14 w-auto`); theme.css (imported
+ * in main.tsx) maps the active daisyUI theme tokens onto the brand parts.
+ */
+
+/* Brand typography: Source Sans 3 body, Inclusive Sans light italic display. */
+body {
+  font-family: var(--font-sans);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+/* Theme-token swatches in the control panel. */
+.swatch {
+  inline-size: 1.15rem;
+  block-size: 1.15rem;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-base-content) 30%, transparent);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.12);
+}
+
+.swatch[data-selected='true'] {
+  border-color: var(--color-base-content);
+}
+
+/* Shiki code blocks: token colours come from Shiki itself (one theme per
+   active daisyUI theme; GitHub light/dark by default). */
+.code-block,
+.code-block .shiki,
+.code-block .shiki code {
+  font-family: var(--font-mono);
+}
+
+.code-block .shiki {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: inherit;
+}
