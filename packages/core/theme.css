@@ -1,0 +1,51 @@
+/*
+ * @kolektiv/brand theme
+ * ---------------------------------------------------------------------------
+ * Glue your colour tokens (daisyUI theme variables by default) to the brand
+ * parts so colours can be assigned app-wide with no JS.
+ *
+ *   import '@kolektiv/brand-core/theme.css';
+ *
+ * Defaults (matching the Figma board):
+ *   icon mark   -> primary
+ *   olektiv     -> primary @ 75% opacity
+ *   computing   -> primary @ 80% opacity
+ *   built by    -> primary @ 80% opacity
+ *
+ * The rules below are applied to :root and to any `.kolektiv-brand-theme`
+ * container, so you can theme a subtree instead of the whole document.
+ */
+
+:root,
+.kolektiv-brand-theme {
+  /* Indirection tokens: repoint these to retheme every brand part at once. */
+  --kolektiv-brand-primary: var(--color-primary, currentColor);
+  --kolektiv-brand-neutral: var(--color-neutral, currentColor);
+
+  --kolektiv-brand-icon-mark: var(--kolektiv-brand-primary);
+  --kolektiv-brand-word-olektiv: color-mix(
+    in srgb,
+    var(--kolektiv-brand-primary) 75%,
+    transparent
+  );
+  --kolektiv-brand-word-computing: color-mix(
+    in srgb,
+    var(--kolektiv-brand-primary) 80%,
+    transparent
+  );
+  --kolektiv-brand-word-built-by: color-mix(
+    in srgb,
+    var(--kolektiv-brand-built-by-source, var(--kolektiv-brand-primary)) 80%,
+    transparent
+  );
+}
+
+/*
+ * Exploration toggle: pull "Built by" from the neutral token instead of primary
+ * (opacity is kept). Add the class to any ancestor, or use the data attribute
+ * on <html>/<body>.
+ */
+.kolektiv-brand-built-by-neutral,
+[data-kolektiv-brand-built-by='neutral'] {
+  --kolektiv-brand-built-by-source: var(--kolektiv-brand-neutral);
+}
