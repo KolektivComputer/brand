@@ -1,0 +1,23 @@
+{
+  "name": "kolektiv-brand",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @kolektiv/brand-docs dev",
+    "build": "pnpm --filter @kolektiv/brand-docs build",
+    "preview": "pnpm --filter @kolektiv/brand-docs preview",
+    "check": "pnpm --filter @kolektiv/brand-docs typecheck",
+    "generate": "node scripts/generate.mjs",
+    "normalize:marks": "node scripts/normalize-marks.mjs",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r --filter \"./packages/**\" test",
+    "build:packages": "pnpm -r --filter \"./packages/**\" build",
+    "pack:packages": "pnpm -r --filter \"./packages/**\" pack",
+    "publish:packages": "pnpm -r --filter \"./packages/**\" publish --access public"
+  }
+}

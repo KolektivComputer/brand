@@ -1,0 +1,9 @@
+packages:
+  - packages/*
+  - docs
+allowBuilds:
+  esbuild: true
+  '@parcel/watcher': true
+  '@swc/core': true
+minimumReleaseAgeExclude:
+  - '@kolektiv/themes@0.0.1-SNAPSHOT.1 || 0.0.1-SNAPSHOT.2'
