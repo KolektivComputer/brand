@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Solid (`@kolektiv/brand-solid`), Preact (`@kolektiv/brand-preact`), Lit
+  (`@kolektiv/brand-lit`) and Angular (`@kolektiv/brand-angular`) component packages,
+  matching the framework targets Keel supports. The docs Getting started page now covers
+  all eight targets.
+
 ## [0.1.0] - 2026-09-13
 
 ### Added

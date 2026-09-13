@@ -1,9 +1,9 @@
 # Kolektiv brand
 
 Framework-agnostic components for the Kolektiv brand mark. One source SVG is compiled
-into a typed AST, then rendered by four wrapper packages (React, Vue, Svelte and a
-vanilla custom element) that all share **exactly the same inner markup** and the same
-public API.
+into a typed AST, then rendered by wrapper packages for every framework we build in
+(React, Vue, Svelte, Solid, Preact, Lit, Angular) plus a vanilla custom element, all
+sharing **exactly the same inner markup** and the same public API.
 
 ## Brand typography
 
@@ -55,6 +55,10 @@ tag it, and bump the dependency here; every consumer picks it up.
 │   ├── react     (@kolektiv/brand-react)
 │   ├── vue       (@kolektiv/brand-vue)
 │   ├── svelte    (@kolektiv/brand-svelte)
+│   ├── solid     (@kolektiv/brand-solid)
+│   ├── preact    (@kolektiv/brand-preact)
+│   ├── lit       (@kolektiv/brand-lit)
+│   ├── angular   (@kolektiv/brand-angular)
 │   └── vanilla   (@kolektiv/brand-vanilla)
 ├── docs/         (@kolektiv/brand-docs)              # docs site + kitchen sink, built to repo-root dist/
 ├── .github/workflows/                               # ci, pages, publish, release
@@ -159,6 +163,10 @@ into the markup and scoped by the `kolektiv-brand-hover` class on the root `<svg
 | `@kolektiv/brand-react` | `IconMark`, `Wordmark`, `ComputingWordmark`, `BuiltByMark` |
 | `@kolektiv/brand-vue` | `IconMark`, `Wordmark`, `ComputingWordmark`, `BuiltByMark` |
 | `@kolektiv/brand-svelte` | `IconMark`, `Wordmark`, `ComputingWordmark`, `BuiltByMark` |
+| `@kolektiv/brand-solid` | `IconMark`, `Wordmark`, `ComputingWordmark`, `BuiltByMark` |
+| `@kolektiv/brand-preact` | `IconMark`, `Wordmark`, `ComputingWordmark`, `BuiltByMark` |
+| `@kolektiv/brand-lit` | `brandMarkTemplate` / `brandVariantTemplate` + `kolektiv-*-mark` elements |
+| `@kolektiv/brand-angular` | `KolektivBrandMark`, `KolektivIconMark`, `KolektivWordmark`, `KolektivComputingWordmark`, `KolektivBuiltByMark` |
 | `@kolektiv/brand-vanilla` | `iconMarkMarkup` / `createIconMark`, `wordmarkMarkup` / `createWordmark`, `computingWordmarkMarkup` / `createComputingWordmark`, `builtByMarkMarkup` / `createBuiltByMark` |
 
 Props: `colors` (per-part base colour), `hoverColors` (per-part hover colour), `color`
@@ -350,7 +358,7 @@ custom element too.
 
 ## Publishing & releases
 
-The five packages under `packages/*` are publishable (public, scoped to `@kolektiv`); the
+The nine packages under `packages/*` are publishable (public, scoped to `@kolektiv`); the
 `docs` site is private and `@kolektiv/themes` lives in its own repository. Each package
 ships `dist` (+ `theme.css` where relevant) and `LICENSE`, and builds before publish.
 

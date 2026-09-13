@@ -18,6 +18,10 @@ PACKAGES=(
   @kolektiv/brand-react
   @kolektiv/brand-vue
   @kolektiv/brand-svelte
+  @kolektiv/brand-solid
+  @kolektiv/brand-preact
+  @kolektiv/brand-lit
+  @kolektiv/brand-angular
   @kolektiv/brand-vanilla
 )
 

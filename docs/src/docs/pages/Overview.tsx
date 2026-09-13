@@ -12,7 +12,8 @@ export function Overview() {
       <PageTitle>Kolektiv brand</PageTitle>
       <Lead>
         This is the Kolektiv branding, published as components for the frameworks we build in —
-        React, Vue, Svelte and vanilla. Use them wherever the mark or wordmark belongs.
+        React, Vue, Svelte, Solid, Preact, Lit and Angular, plus vanilla. Use them wherever the
+        mark or wordmark belongs.
       </Lead>
 
       <div className="mb-8 rounded-2xl border border-base-300 bg-linear-to-br from-base-200 to-base-300 p-8">
@@ -30,9 +31,10 @@ export function Overview() {
 
       <Section title="What this is">
         <p className="max-w-2xl text-sm opacity-80">
-          One source SVG compiled into typed parts, wrapper packages for four frameworks, and a
-          small theme layer so the colours follow your app&apos;s design tokens. It is the
-          branding, not a full design system.
+          One source SVG compiled into typed parts, wrapper packages for every framework we build
+          in (React, Vue, Svelte, Solid, Preact, Lit, Angular) and vanilla, and a small theme
+          layer so the colours follow your app&apos;s design tokens. It is the branding, not a
+          full design system.
         </p>
       </Section>
 
@@ -58,7 +60,7 @@ export function Overview() {
         <CodeSample
           lang="bash"
           code={`pnpm add @kolektiv/brand-react
-# or @kolektiv/brand-vue / -svelte / -vanilla / -core`}
+# or -vue / -svelte / -solid / -preact / -lit / -angular / -vanilla / -core`}
         />
         <p className="text-xs opacity-60">
           Packages are fetched from the aggregated <code>npm-public</code> group registry.

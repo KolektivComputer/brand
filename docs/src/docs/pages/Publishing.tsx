@@ -5,7 +5,7 @@ export function Publishing() {
     <div>
       <PageTitle>Publishing</PageTitle>
       <Lead>
-        The five <code>@kolektiv/brand-*</code> packages are published to the hosted{' '}
+        The <code>@kolektiv/brand-*</code> packages are published to the hosted{' '}
         <code>brand-npm</code> repository and fetched from the aggregated{' '}
         <code>npm-public</code> group. Tagging and releases mirror Keel.
       </Lead>
@@ -17,11 +17,12 @@ export function Publishing() {
           </li>
           <li>
             <code>@kolektiv/brand-react</code> / <code>-vue</code> / <code>-svelte</code> /{' '}
-            <code>-vanilla</code> — framework wrappers
+            <code>-solid</code> / <code>-preact</code> / <code>-lit</code> /{' '}
+            <code>-angular</code> / <code>-vanilla</code> — framework wrappers
           </li>
           <li>
             <code>@kolektiv/themes</code> — colour-only tokens → daisyUI CSS, Shiki themes and{' '}
-            <code>tokens.json</code>
+            <code>tokens.json</code> (separate repository)
           </li>
         </ul>
       </Section>
