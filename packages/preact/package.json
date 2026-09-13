@@ -1,0 +1,52 @@
+{
+  "name": "@kolektiv/brand-preact",
+  "version": "0.1.0",
+  "description": "Preact components for the Kolektiv brand mark.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "theme.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./theme.css": "./theme.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": ["kolektiv", "brand", "logo", "svg", "preact"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KolektivComputer/brand.git",
+    "directory": "packages/preact"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@kolektiv/brand-core": "workspace:^"
+  },
+  "devDependencies": {
+    "preact": "^10.25.4",
+    "preact-render-to-string": "^6.6.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.0"
+  },
+  "peerDependencies": {
+    "preact": "^10"
+  }
+}
