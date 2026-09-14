@@ -82,7 +82,7 @@ Useful scripts (from the repo root):
 | Command | What it does |
 | --- | --- |
 | `pnpm dev` | Start the docs site dev server |
-| `pnpm build` | Build the docs site into `dist/` (GitHub Pages artifact) |
+| `pnpm build` | Build the docs site into `dist/` (static site artifact) |
 | `pnpm preview` | Preview the built docs site |
 | `pnpm check` | Type-check the docs site |
 | `pnpm generate` | Regenerate `packages/core/src/generated/*` from the source SVGs |
@@ -396,10 +396,11 @@ Secrets: `YURI_CAPITAL_REPO_USERNAME`, `YURI_CAPITAL_REPO_PASSWORD`.
 
 ### Docs deployment
 
-`.github/workflows/pages.yml` builds the docs site (`pnpm build` → repo-root `dist/`) and
-deploys it to GitHub Pages with `actions/upload-pages-artifact` + `actions/deploy-pages`.
-Set the optional repository variable `DOCS_SITE` to the deployed origin; the Vite build
-uses `base: './'`, so the same artifact works at a custom domain or a project subpath.
+Cloudflare Pages builds and deploys the docs site through its Git integration on
+pushes to `main` (project `brand-docs`): `pnpm build` emits the repo-root `dist/`.
+Set the `VITE_DOCS_SITE` build environment variable to the deployed origin; the Vite
+build uses `base: './'`, so the same artifact works at a custom domain or a project
+subpath.
 
 ## Updating the artwork
 

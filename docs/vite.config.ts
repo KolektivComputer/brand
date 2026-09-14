@@ -4,7 +4,7 @@ import { buildNoFlashScript } from '@kolektiv/common-docs-chrome';
 import { defineConfig, type Plugin } from 'vite';
 
 // Docs are a static site served from the repository root `dist/` (matching the
-// GitHub Pages workflow). `base: './'` keeps asset URLs relative so the site
+// Cloudflare Pages build). `base: './'` keeps asset URLs relative so the site
 // works both at a custom domain root and at a project-page subpath.
 
 // The shared prefs engine (`@kolektiv/common-docs-chrome`) persists the active

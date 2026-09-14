@@ -76,15 +76,15 @@ pnpm publish:packages     # -> brand-npm`}
         </ol>
         <p className="text-xs opacity-60">
           Secrets: <code>YURI_CAPITAL_REPO_USERNAME</code> /{' '}
-          <code>YURI_CAPITAL_REPO_PASSWORD</code>. Optional repo variable{' '}
-          <code>DOCS_SITE</code> sets the deployed docs origin.
+          <code>YURI_CAPITAL_REPO_PASSWORD</code>. Optional build variable{' '}
+          <code>VITE_DOCS_SITE</code> sets the deployed docs origin.
         </p>
       </Section>
 
       <Section title="Docs site">
         <p className="text-sm opacity-80">
           This site is built from <code>docs/</code> to the repository-root <code>dist/</code>{' '}
-          and deployed to GitHub Pages by <code>.github/workflows/pages.yml</code>.
+          and deployed to Cloudflare Pages through its Git integration.
         </p>
       </Section>
     </div>
