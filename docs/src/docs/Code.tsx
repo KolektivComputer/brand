@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { shikiThemeFor } from '@kolektiv/themes';
-import { kolektivShikiThemes } from '@kolektiv/themes/shiki';
+import { defaultShikiThemes, shikiThemeForChrome } from '@kolektiv/common-docs-chrome';
 import { createHighlighterCore, type HighlighterCore, type ThemeRegistration } from 'shiki/core';
 import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
 import bash from 'shiki/langs/bash.mjs';
@@ -18,9 +17,10 @@ import catppuccinMocha from 'shiki/themes/catppuccin-mocha.mjs';
 import githubDark from 'shiki/themes/github-dark.mjs';
 import githubLight from 'shiki/themes/github-light.mjs';
 import nord from 'shiki/themes/nord.mjs';
-import { schemeFor, useActiveTheme } from './active-theme';
+import { effectiveCodeTheme, useThemePrefs } from './active-theme';
 
-const SHIKI_THEMES: Record<string, ThemeRegistration> = {
+// Presets referenced by the shared theme registry's Shiki ids.
+const PRESET_THEMES: Record<string, ThemeRegistration> = {
   'github-light': githubLight,
   'github-dark': githubDark,
   nord,
@@ -28,15 +28,31 @@ const SHIKI_THEMES: Record<string, ThemeRegistration> = {
   'catppuccin-frappe': catppuccinFrappe,
   'catppuccin-macchiato': catppuccinMacchiato,
   'catppuccin-mocha': catppuccinMocha,
-  ...kolektivShikiThemes,
 };
+
+// The core's theme registry maps every chrome theme id to a Shiki registration
+// (a Kolektiv palette object or a preset id). Register them all so the picker
+// can switch the highlighter without re-creating it.
+const SHIKI_THEMES: ThemeRegistration[] = Object.values(defaultShikiThemes).flatMap((value) => {
+  if (typeof value === 'string') {
+    const preset = PRESET_THEMES[value];
+    return preset ? [preset] : [];
+  }
+  return value ? [value as ThemeRegistration] : [];
+});
+
+function shikiNameFor(chromeThemeId: string): string {
+  const value = shikiThemeForChrome(chromeThemeId);
+  if (typeof value === 'string') return value;
+  return (value as ThemeRegistration).name ?? chromeThemeId;
+}
 
 let highlighterPromise: Promise<HighlighterCore> | null = null;
 
 function getHighlighter(): Promise<HighlighterCore> {
   if (!highlighterPromise) {
     highlighterPromise = createHighlighterCore({
-      themes: Object.values(SHIKI_THEMES),
+      themes: SHIKI_THEMES,
       langs: [tsx, ts, vue, svelte, html, css, bash, json],
       engine: createJavaScriptRegexEngine(),
     });
@@ -75,8 +91,8 @@ interface CodeProps {
 }
 
 export function Code({ code, lang = 'tsx', className = '' }: CodeProps) {
-  const activeTheme = useActiveTheme();
-  const shikiName = shikiThemeFor(activeTheme, schemeFor(activeTheme));
+  const { theme, codeTheme } = useThemePrefs();
+  const shikiName = shikiNameFor(effectiveCodeTheme(theme, codeTheme));
   const [html, setHtml] = useState('');
 
   useEffect(() => {

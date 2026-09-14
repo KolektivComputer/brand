@@ -25,6 +25,9 @@ importers:
       '@kolektiv/brand-react':
         specifier: workspace:^
         version: link:../packages/react
+      '@kolektiv/common-docs-chrome':
+        specifier: link:../../common-docs-chrome
+        version: link:../../common-docs-chrome
       '@kolektiv/themes':
         specifier: ^0.0.1-SNAPSHOT.2
         version: 0.0.1-SNAPSHOT.2

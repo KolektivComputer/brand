@@ -81,7 +81,7 @@ export function DocsApp() {
 
         <footer className="mx-auto max-w-4xl px-6 pb-10">
           <div className="border-t border-base-300 pt-6">
-            <BuiltByMark className="h-10 w-auto" />
+            <BuiltByMark className="h-10 w-auto" title="Built by Kolektiv Computing" />
             <p className="mt-2 text-xs opacity-60">
               © 2026 Kolektiv Computing ·{' '}
               <a
