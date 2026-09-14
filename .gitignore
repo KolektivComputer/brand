@@ -1,5 +1,7 @@
 node_modules/
 dist/
+packages/core/src/**/*.d.ts
+packages/core/src/**/*.d.ts.map
 .svelte-kit/
 .vite/
 coverage/
