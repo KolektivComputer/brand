@@ -27,13 +27,6 @@ jobs:
         with:
           node-version: "22"
           cache: pnpm
-      # NOTE: `@kolektiv/brand-docs` currently depends on
-      # `@kolektiv/common-docs-chrome` via `link:../../common-docs-chrome`, which
-      # only resolves when that sibling checkout exists (and is built) locally.
-      # CI here has no sibling checkout, so the docs build only works once the
-      # package is published to the @kolektiv registry and the dependency is
-      # switched to `^0.0.1-SNAPSHOT.1` (see the TODO in docs/package.json).
-      # VITE_DOCS_SITE and `base: './'` are unchanged.
       - name: Install
         run: pnpm install --frozen-lockfile
       - name: Build packages
