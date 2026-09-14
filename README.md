@@ -147,7 +147,7 @@ descendants is selected.
 | variant | selected parts | hides |
 | --- | --- | --- |
 | `full` | all parts | — |
-| `builtByMark` | `wordBuiltBy`, `wordOlektiv`, `wordComputing` | `iconMark` |
+| `builtByMark` | `wordBuiltBy`, `iconMark`, `wordOlektiv`, `wordComputing` | — |
 | `computingWordmark` | `iconMark`, `wordOlektiv`, `wordComputing` | `wordBuiltBy` |
 | `wordmark` | `iconMark`, `wordOlektiv` | `wordBuiltBy`, `wordComputing` |
 | `iconMark` | `iconMark` | `wordBuiltBy`, `wordComputing`, `wordOlektiv` |

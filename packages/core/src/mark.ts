@@ -44,7 +44,7 @@ export type BrandMarkVariant =
 
 export const brandMarkVariants: Record<BrandMarkVariant, readonly BrandMarkPart[]> = {
   full: ['iconMark', 'wordOlektiv', 'wordComputing', 'wordBuiltBy'],
-  builtByMark: ['wordBuiltBy', 'wordOlektiv', 'wordComputing'],
+  builtByMark: ['wordBuiltBy', 'iconMark', 'wordOlektiv', 'wordComputing'],
   computingWordmark: ['iconMark', 'wordOlektiv', 'wordComputing'],
   wordmark: ['iconMark', 'wordOlektiv'],
   iconMark: ['iconMark'],

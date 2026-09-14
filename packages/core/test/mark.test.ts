@@ -232,6 +232,7 @@ describe('renderMarkChildren', () => {
         'word_computing',
         'kolektiv_wordmark',
         'word_olektiv',
+        'icon_mark',
       ],
       computingWordmark: [
         'built_by_kolektiv_computing',
@@ -304,6 +305,12 @@ describe('renderBrandMark', () => {
     const html = renderBrandMark({ attributes: { 'data-testid': 'mark', focusable: false } });
     expect(html).toContain('data-testid="mark"');
     expect(html).toContain('focusable="false"');
+  });
+
+  it('includes the K icon mark in the built-by variant', () => {
+    const html = renderBrandMark({ variant: 'builtByMark' });
+    expect(html).toContain('id="icon_mark"');
+    expect((html.match(/<path/g) ?? []).length).toBe(24);
   });
 });
 

@@ -27,7 +27,7 @@ export function Components() {
         <CodeSample
           lang="text"
           code={`full              all parts
-builtByMark       wordBuiltBy, wordOlektiv, wordComputing
+builtByMark       wordBuiltBy, iconMark, wordOlektiv, wordComputing
 computingWordmark iconMark, wordOlektiv, wordComputing
 wordmark          iconMark, wordOlektiv
 iconMark          iconMark`}
