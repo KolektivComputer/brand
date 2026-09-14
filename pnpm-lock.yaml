@@ -26,8 +26,8 @@ importers:
         specifier: workspace:^
         version: link:../packages/react
       '@kolektiv/common-docs-chrome':
-        specifier: ^0.0.1-SNAPSHOT.1
-        version: 0.0.1-SNAPSHOT.1(astro@7.3.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.5.1)(jiti@2.7.0))(daisyui@5.7.37)(tailwindcss@4.3.3)
+        specifier: ^0.0.1-SNAPSHOT.2
+        version: 0.0.1-SNAPSHOT.2(astro@7.3.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.5.1)(jiti@2.7.0))(daisyui@5.7.37)(tailwindcss@4.3.3)
       '@kolektiv/themes':
         specifier: ^0.0.1-SNAPSHOT.2
         version: 0.0.1-SNAPSHOT.2
@@ -1123,8 +1123,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kolektiv/common-docs-chrome@0.0.1-SNAPSHOT.1':
-    resolution: {integrity: sha512-1PLnrM0UYr+Uk/e2ptMMv3Hd5nQ/R9vw7deHhUV5oqwZs3kYVP4n+WLBMl5X9/sLmho9JwDXtX+Fxal64jsWyA==}
+  '@kolektiv/common-docs-chrome@0.0.1-SNAPSHOT.2':
+    resolution: {integrity: sha512-o4LVx2CkDrBRLf6FEHU6FQATXp+vftXZip68Ck6nakrnHI/cW7ZVeTdknvjzHr/NSblm/sTDCvnUbg3BtfrXGw==}
     engines: {node: '>=22'}
     peerDependencies:
       astro: '>=5'
@@ -3930,7 +3930,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@kolektiv/common-docs-chrome@0.0.1-SNAPSHOT.1(astro@7.3.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.5.1)(jiti@2.7.0))(daisyui@5.7.37)(tailwindcss@4.3.3)':
+  '@kolektiv/common-docs-chrome@0.0.1-SNAPSHOT.2(astro@7.3.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.5.1)(jiti@2.7.0))(daisyui@5.7.37)(tailwindcss@4.3.3)':
     dependencies:
       '@kolektiv/themes': 0.0.1-SNAPSHOT.2
       astro: 7.3.2(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.5.1)(jiti@2.7.0)
