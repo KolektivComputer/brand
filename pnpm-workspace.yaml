@@ -9,3 +9,4 @@ minimumReleaseAgeExclude:
   - '@kolektiv/themes@0.0.1-SNAPSHOT.1 || 0.0.1-SNAPSHOT.2'
   - '@kolektiv/common-docs-chrome@0.0.1-SNAPSHOT.3'
   - '@kolektiv/brand-core@0.1.0'
+  - '@kolektiv/brand-core@0.1.1'

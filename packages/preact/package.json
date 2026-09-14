@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-preact",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Preact components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",

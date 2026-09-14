@@ -14,6 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   matching the framework targets Keel supports. The docs Getting started page now covers
   all eight targets.
 
+## [0.1.1] - 2026-09-14
+
+### Fixed
+
+- `builtByMark` now includes the `iconMark` K, so `renderBrandMark({ variant: 'builtByMark' })`
+  and `<BrandMark variant="builtByMark">` render the full "built by Kolektiv computing" wordmark
+  instead of "built by olektiv computing".
+
 ## [0.1.0] - 2026-09-13
 
 ### Added

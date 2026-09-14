@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-vanilla",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Framework-free helpers and custom element for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",

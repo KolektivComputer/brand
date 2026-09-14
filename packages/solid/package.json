@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-solid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SolidJS components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",

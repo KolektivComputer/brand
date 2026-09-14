@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",
