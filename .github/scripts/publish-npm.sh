@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# Publish @kolektiv/brand-* to the hosted Nexus repo (brand-npm).
+# Publish @kolektiv/brand-* to the Kolektiv Nexus npm-public.
 # npm-releases / npm-snapshots are groups — read-only, PUT returns 404.
 #
 # The repo `.npmrc` maps `@kolektiv` to the aggregated `npm-public` group for
-# fetching, so we temporarily append the hosted `brand-npm` mapping (with auth)
+# fetching, so we temporarily append the npm-public mapping (with auth)
 # to the project `.npmrc` for the duration of the publish.
 set -euo pipefail
 
 : "${YURI_CAPITAL_REPO_USERNAME:?set YURI_CAPITAL_REPO_USERNAME}"
 : "${YURI_CAPITAL_REPO_PASSWORD:?set YURI_CAPITAL_REPO_PASSWORD}"
 
-HOST="repo.yuri.capital"
-REGISTRY="https://${HOST}/repository/brand-npm/"
+HOST="repo.kolektiv.computer"
+REGISTRY="https://${HOST}/repository/npm-public/"
 VERSION="$(node -p "require('./packages/core/package.json').version")"
 PACKAGES=(
   @kolektiv/brand-core

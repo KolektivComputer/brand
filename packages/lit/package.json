@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-lit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Lit components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",
@@ -29,14 +29,22 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
-  "keywords": ["kolektiv", "brand", "logo", "svg", "lit", "web-components"],
+  "keywords": [
+    "kolektiv",
+    "brand",
+    "logo",
+    "svg",
+    "lit",
+    "web-components"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KolektivComputer/brand.git",
     "directory": "packages/lit"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://repo.kolektiv.computer/repository/npm-public/"
   },
   "dependencies": {
     "@kolektiv/brand-core": "workspace:^"

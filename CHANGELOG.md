@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-09-27
+
+### Changed
+
+- Publish and consume `@kolektiv/brand-*` via `https://repo.kolektiv.computer/repository/npm-public/`.
+
+
 ### Added
 
 - Solid (`@kolektiv/brand-solid`), Preact (`@kolektiv/brand-preact`), Lit

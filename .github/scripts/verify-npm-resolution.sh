@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Verify anonymously that @kolektiv/brand-* at a version resolves from the
 # advertised npm registry — the `npm-public` group, which aggregates every
-# public Kolektiv project's hosted repository (brand-npm, keel-npm, ...).
+# public Kolektiv project's hosted repository (npm-public, npm-public, ...).
 #
 # Usage: verify-npm-resolution.sh [version]
 set -uo pipefail
 
-REGISTRY="https://repo.yuri.capital/repository/npm-public/"
+REGISTRY="https://repo.kolektiv.computer/repository/npm-public/"
 PACKAGES=(
   @kolektiv/brand-core
   @kolektiv/brand-react

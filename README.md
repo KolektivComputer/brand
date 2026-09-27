@@ -90,7 +90,7 @@ Useful scripts (from the repo root):
 | `pnpm typecheck` | Type-check every workspace project |
 | `pnpm test` | Run the package tests |
 | `pnpm build:packages` | Build the publishable packages |
-| `pnpm pack:packages` / `pnpm publish:packages` | Pack/publish to the `brand-npm` repository |
+| `pnpm pack:packages` / `pnpm publish:packages` | Pack/publish to the `npm-public` repository |
 
 ## The SVG -> generated-mark pipeline
 
@@ -364,18 +364,18 @@ ships `dist` (+ `theme.css` where relevant) and `LICENSE`, and builds before pub
 
 **Registry model (mirrors Keel):**
 
-- **Publish** to the per-project hosted repository `brand-npm`:
-  `https://repo.yuri.capital/repository/brand-npm/`
+- **Publish** to the per-project hosted repository `npm-public`:
+  `https://repo.kolektiv.computer/repository/npm-public/`
 - **Fetch** from the aggregated group **`npm-public`**, which contains every public
-  Kolektiv project repo (`brand-npm`, `keel-npm`, …):
-  `https://repo.yuri.capital/repository/npm-public/`. This is configured repo-wide in
+  Kolektiv project repo (`npm-public`, `npm-public`, …):
+  `https://repo.kolektiv.computer/repository/npm-public/`. This is configured repo-wide in
   `.npmrc`, so consumers and other Kolektiv projects only ever reference `npm-public`.
 
 ```bash
 # from the repo root
 pnpm build:packages      # build the publishable packages
 pnpm pack:packages       # inspect the tarballs without publishing
-pnpm publish:packages    # publish to brand-npm (CI uses .github/scripts/publish-npm.sh)
+pnpm publish:packages    # publish to npm-public (CI uses .github/scripts/publish-npm.sh)
 ```
 
 `@kolektiv/brand-core` is a workspace dependency of the wrappers
@@ -389,7 +389,7 @@ published tarball. Keep the package `version` fields in sync across the workspac
 2. `git tag vX.Y.Z && git push origin vX.Y.Z`.
 3. `.github/workflows/release.yml` creates/updates the GitHub Release from the changelog
    section (`*SNAPSHOT*` versions become prereleases).
-4. `.github/workflows/publish.yml` builds, publishes to `brand-npm`, then verifies
+4. `.github/workflows/publish.yml` builds, publishes to `npm-public`, then verifies
    resolution anonymously from `npm-public` (`.github/scripts/verify-npm-resolution.sh`).
 
 Secrets: `YURI_CAPITAL_REPO_USERNAME`, `YURI_CAPITAL_REPO_PASSWORD`.

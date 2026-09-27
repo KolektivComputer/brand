@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-preact",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Preact components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",
@@ -27,14 +27,21 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
-  "keywords": ["kolektiv", "brand", "logo", "svg", "preact"],
+  "keywords": [
+    "kolektiv",
+    "brand",
+    "logo",
+    "svg",
+    "preact"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KolektivComputer/brand.git",
     "directory": "packages/preact"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://repo.kolektiv.computer/repository/npm-public/"
   },
   "dependencies": {
     "@kolektiv/brand-core": "workspace:^"

@@ -6,7 +6,7 @@ export function Publishing() {
       <PageTitle>Publishing</PageTitle>
       <Lead>
         The <code>@kolektiv/brand-*</code> packages are published to the hosted{' '}
-        <code>brand-npm</code> repository and fetched from the aggregated{' '}
+        <code>npm-public</code> repository and fetched from the aggregated{' '}
         <code>npm-public</code> group. Tagging and releases mirror Keel.
       </Lead>
 
@@ -35,13 +35,13 @@ export function Publishing() {
         <CodeSample
           lang="text"
           code={`# .npmrc
-@kolektiv:registry=https://repo.yuri.capital/repository/npm-public/`}
+@kolektiv:registry=https://repo.kolektiv.computer/repository/npm-public/`}
         />
       </Section>
 
       <Section title="Publishing (this repository)">
         <p className="text-sm opacity-80">
-          <code>pnpm publish:packages</code> pushes to <code>brand-npm</code>; the Publish
+          <code>pnpm publish:packages</code> pushes to <code>npm-public</code>; the Publish
           workflow does the same on any <code>v*</code> tag and then verifies anonymously
           against <code>npm-public</code>.
         </p>
@@ -49,7 +49,7 @@ export function Publishing() {
           lang="bash"
           code={`pnpm build:packages
 pnpm pack:packages        # inspect tarballs
-pnpm publish:packages     # -> brand-npm`}
+pnpm publish:packages     # -> npm-public`}
         />
       </Section>
 
@@ -70,7 +70,7 @@ pnpm publish:packages     # -> brand-npm`}
             section (SNAPSHOT versions are prereleases).
           </li>
           <li>
-            <code>publish.yml</code> builds and publishes to <code>brand-npm</code>, then
+            <code>publish.yml</code> builds and publishes to <code>npm-public</code>, then
             verifies resolution from <code>npm-public</code>.
           </li>
         </ol>

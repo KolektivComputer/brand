@@ -1,10 +1,12 @@
 {
   "name": "@kolektiv/brand-vue",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vue components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",
-  "sideEffects": ["./theme.css"],
+  "sideEffects": [
+    "./theme.css"
+  ],
   "files": [
     "dist",
     "theme.css"
@@ -39,7 +41,8 @@
     "directory": "packages/vue"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://repo.kolektiv.computer/repository/npm-public/"
   },
   "dependencies": {
     "@kolektiv/brand-core": "workspace:^"
