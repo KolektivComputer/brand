@@ -46,6 +46,7 @@ const DEFAULT_PREFS: ChromePrefs = {
   codeTheme: DEFAULT_CODE_THEME,
   lang: '',
   framework: '',
+  switchers: {},
 };
 
 // `useSyncExternalStore` requires a stable snapshot reference. The core
