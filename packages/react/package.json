@@ -1,6 +1,6 @@
 {
   "name": "@kolektiv/brand-react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "React components for the Kolektiv brand mark.",
   "license": "MIT",
   "type": "module",
